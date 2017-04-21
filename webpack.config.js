@@ -9,6 +9,7 @@ module.exports = [
   {
     entry: resolve(sourcePath, 'server'),
     output: {
+      path: buildPath,
       filename: 'server.js',
     },
     externals: [nodeExternals()],
