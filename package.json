@@ -1,3 +1,9 @@
 {
-  "private": true
+  "scripts": {
+    "start": "node source/server"
+  },
+  "private": true,
+  "dependencies": {
+    "koa": "^2.2.0"
+  }
 }
