@@ -3,7 +3,7 @@
     "clean": "rimraf build",
     "build": "webpack",
     "prestart": "npm run clean && npm run build",
-    "start": "node source/server"
+    "start": "node build/server"
   },
   "private": true,
   "dependencies": {
