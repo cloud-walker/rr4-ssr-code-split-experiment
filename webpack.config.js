@@ -4,6 +4,13 @@ const nodeExternals = require('webpack-node-externals')
 const sourcePath = resolve(__dirname, 'source')
 const buildPath = resolve(__dirname, 'build')
 
+const resolveConfig = {
+  modules: [
+    'node_modules',
+    sourcePath,
+  ],
+}
+
 module.exports = [
   // Server config
   {
@@ -13,6 +20,21 @@ module.exports = [
       filename: 'server.js',
     },
     externals: [nodeExternals()],
+    resolve: resolveConfig,
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', {targets: {node: true}}],
+              'react',
+            ],
+          },
+        },
+      ],
+    },
   },
 
   // Client config
@@ -22,5 +44,6 @@ module.exports = [
       path: buildPath,
       filename: '[name].js',
     },
+    resolve: resolveConfig,
   },
 ]
