@@ -1,9 +1,15 @@
 {
   "scripts": {
+    "clean": "rimraf build",
+    "build": "webpack",
+    "prestart": "npm run clean && npm run build",
     "start": "node source/server"
   },
   "private": true,
   "dependencies": {
-    "koa": "^2.2.0"
+    "koa": "^2.2.0",
+    "rimraf": "^2.6.1",
+    "webpack": "^2.4.1",
+    "webpack-node-externals": "^1.5.4"
   }
 }
