@@ -17,6 +17,7 @@ module.exports = [
       path: buildPath,
       filename: 'server.js',
     },
+    target: 'node',
     externals: [nodeExternals()],
     resolve: resolveConfig,
     module: {

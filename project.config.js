@@ -1,9 +1,10 @@
 const {resolve} = require('path')
+const appRootDir = require('app-root-dir')
 
-const buildPath = resolve(__dirname, 'build')
+const buildPath = resolve(appRootDir.get(), 'build')
 
 module.exports = {
-  sourcePath: resolve(__dirname, 'source'),
+  sourcePath: resolve(appRootDir.get(), 'source'),
   buildPath,
   assetsPath: buildPath,
 }
