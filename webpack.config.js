@@ -1,8 +1,6 @@
 const {resolve} = require('path')
 const nodeExternals = require('webpack-node-externals')
-
-const sourcePath = resolve(__dirname, 'source')
-const buildPath = resolve(__dirname, 'build')
+const {buildPath, sourcePath} = require('./project.config')
 
 const resolveConfig = {
   modules: [
