@@ -44,5 +44,18 @@ module.exports = [
       filename: '[name].js',
     },
     resolve: resolveConfig,
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              'react',
+            ],
+          },
+        },
+      ],
+    },
   },
 ]
