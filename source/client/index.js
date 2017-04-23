@@ -1,8 +1,8 @@
-const React = require('react')
-const {render} = require('react-dom')
-const {BrowserRouter} = require('react-router-dom')
+import React from 'react'
+import {render} from 'react-dom'
+import {BrowserRouter} from 'react-router-dom'
 
-const App = require('shared/components/App')
+import App from 'shared/components/App'
 
 const hook = document.getElementById('hook')
 const content = (

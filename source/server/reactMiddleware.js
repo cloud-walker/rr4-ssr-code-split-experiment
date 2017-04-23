@@ -1,11 +1,11 @@
-const React = require('react')
-const {renderToString} = require('react-dom/server')
-const {StaticRouter} = require('react-router')
+import React from 'react'
+import {renderToString} from 'react-dom/server'
+import {StaticRouter} from 'react-router'
 
 const createLayout = require('./createLayout')
 const App = require('shared/components/App')
 
-module.exports = ctx => {
+export default ctx => {
   const routerContext = {}
   const content = renderToString(
     <StaticRouter location={ctx.request.url} context={routerContext}>

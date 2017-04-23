@@ -1,8 +1,8 @@
-const Koa = require('koa')
-const serve = require('koa-static')
+import Koa from 'koa'
+import serve from 'koa-static'
 
-const {assetsPath} = require('../../project.config')
-const reactMiddlware = require('./reactMiddleware')
+import {assetsPath} from '../../project.config'
+import reactMiddlware from './reactMiddleware'
 
 const app = new Koa()
 const port = 4000

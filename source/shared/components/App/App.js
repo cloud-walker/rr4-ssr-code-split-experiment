@@ -1,5 +1,5 @@
-const React = require('react')
-const {Route, Link} = require('react-router-dom')
+import React from 'react'
+import {Route, Link} from 'react-router-dom'
 
 const Component = () =>
   <div>
@@ -18,4 +18,4 @@ const Component = () =>
     <Route path="/bar" render={() => <div>bar</div>} />
   </div>
 
-module.exports = Component
+export default Component

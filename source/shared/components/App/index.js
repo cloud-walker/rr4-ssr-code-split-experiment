@@ -1,1 +1,1 @@
-module.exports = require('./App')
+export {default} from './App'
