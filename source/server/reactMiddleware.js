@@ -2,8 +2,8 @@ import React from 'react'
 import {renderToString} from 'react-dom/server'
 import {StaticRouter} from 'react-router'
 
-const createLayout = require('./createLayout')
-const App = require('shared/components/App')
+import createLayout from './createLayout'
+import App from 'shared/components/App'
 
 export default ctx => {
   const routerContext = {}

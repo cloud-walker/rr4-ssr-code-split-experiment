@@ -1,6 +1,10 @@
 import React from 'react'
 import {Route, Link} from 'react-router-dom'
 
+import Home from 'shared/components/Home'
+import Foo from 'shared/components/Foo'
+import Bar from 'shared/components/Bar'
+
 const Component = () =>
   <div>
     <nav>
@@ -13,9 +17,9 @@ const Component = () =>
 
     <h2>App</h2>
 
-    <Route exact path="/" render={() => <div>home</div>} />
-    <Route path="/foo" render={() => <div>foo</div>} />
-    <Route path="/bar" render={() => <div>bar</div>} />
+    <Route exact path="/" component={Home}/>
+    <Route path="/foo" component={Foo}/>
+    <Route path="/bar" component={Bar}/>
   </div>
 
 export default Component
