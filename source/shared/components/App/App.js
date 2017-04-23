@@ -3,7 +3,6 @@ const {Route, Link} = require('react-router-dom')
 
 const Component = () =>
   <div>
-    <h2>App</h2>
     <nav>
       <Link to="/">home</Link>
       {' '}
@@ -11,6 +10,8 @@ const Component = () =>
       {' '}
       <Link to="/bar">bar</Link>
     </nav>
+
+    <h2>App</h2>
 
     <Route exact path="/" render={() => <div>home</div>} />
     <Route path="/foo" render={() => <div>foo</div>} />
