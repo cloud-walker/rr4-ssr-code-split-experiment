@@ -5,7 +5,7 @@ const createLayout = require('./createLayout')
 const App = require('shared/components/App')
 
 const content = renderToString(<App />)
-const html = createLayout({})
+const html = createLayout({content})
 
 module.exports = ctx => {
   ctx.body = html
