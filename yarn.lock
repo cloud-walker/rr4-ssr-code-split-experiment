@@ -2210,6 +2210,12 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-async-bootstrapper@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-async-bootstrapper/-/react-async-bootstrapper-1.1.1.tgz#130153c064558edf5fae6500db4e2081662fa323"
+  dependencies:
+    react-tree-walker "^2.1.1"
+
 react-async-component@^1.0.0-beta.3:
   version "1.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/react-async-component/-/react-async-component-1.0.0-beta.3.tgz#72f79feecd47c7345dc15e24eec86d81a0ce320c"
@@ -2243,6 +2249,10 @@ react-router@^4.1.1:
     path-to-regexp "^1.5.3"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-tree-walker@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-tree-walker/-/react-tree-walker-2.1.1.tgz#80ab80a0caa78f029fea39f42306b13b5d51bb8d"
 
 react@^15.5.4:
   version "15.5.4"

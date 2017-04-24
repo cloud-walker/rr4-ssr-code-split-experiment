@@ -1,14 +1,18 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
+import {AsyncComponentProvider} from 'react-async-component'
+import asyncBootstrapper from 'react-async-bootstrapper'
 
 import App from 'shared/components/App'
 
 const hook = document.getElementById('hook')
 const content = (
-  <BrowserRouter>
-    <App/>
-  </BrowserRouter>
+  <AsyncComponentProvider rehydrateState={window.__ASYNC_COMPONENTS_STATE}>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
+  </AsyncComponentProvider>
 )
 
-render(content, hook)
+asyncBootstrapper(content).then(() => render(content, hook))
