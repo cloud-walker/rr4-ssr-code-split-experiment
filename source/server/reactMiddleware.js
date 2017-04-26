@@ -25,10 +25,12 @@ export default async ctx => {
     </Provider>
   )
   await asyncBootstrapper(jsx)
-  const content = renderToString(jsx)
-  const asyncState = asyncContext.getState()
 
-  const html = createLayout({content, asyncState})
+  const html = createLayout({
+    content: renderToString(jsx),
+    asyncState: asyncContext.getState(),
+    reduxState: store.getState(),
+  })
 
   ctx.body = html
 }

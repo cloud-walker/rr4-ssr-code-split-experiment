@@ -9,7 +9,7 @@ import {Provider} from 'react-redux'
 import App from 'shared/components/App'
 import reducers from 'shared/reducers'
 
-const store = createStore(reducers)
+const store = createStore(reducers, window.__REDUX_STATE)
 const hook = document.getElementById('hook')
 const content = (
   <Provider store={store}>
