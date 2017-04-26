@@ -19,8 +19,10 @@
     "react-async-bootstrapper": "^1.1.1",
     "react-async-component": "^1.0.0-beta.3",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
     "rimraf": "^2.6.1",
     "webpack": "^2.4.1",
     "webpack-node-externals": "^1.5.4"
