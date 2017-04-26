@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "app-root-dir": "^1.0.2",
+    "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
@@ -20,6 +21,7 @@
     "react-async-bootstrapper": "^1.1.1",
     "react-async-component": "^1.0.0-beta.3",
     "react-dom": "^15.5.4",
+    "react-jobs": "^1.0.0-beta.2",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",

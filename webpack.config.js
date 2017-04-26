@@ -4,8 +4,8 @@ const {buildPath, sourcePath} = require('./project.config')
 
 const resolveConfig = {
   modules: [
-    'node_modules',
     sourcePath,
+    'node_modules',
   ],
 }
 
@@ -42,6 +42,11 @@ module.exports = [
     output: {
       path: buildPath,
       filename: '[name].js',
+    },
+    target: 'web',
+    node: {
+      fs: 'empty',
+      net: 'empty',
     },
     resolve: resolveConfig,
     module: {
