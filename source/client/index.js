@@ -1,14 +1,24 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
+import {AsyncComponentProvider} from 'react-async-component'
+import asyncBootstrapper from 'react-async-bootstrapper'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
 
 import App from 'shared/components/App'
+import reducers from 'shared/reducers'
 
+const store = createStore(reducers, window.__REDUX_STATE)
 const hook = document.getElementById('hook')
 const content = (
-  <BrowserRouter>
-    <App/>
-  </BrowserRouter>
+  <Provider store={store}>
+    <AsyncComponentProvider rehydrateState={window.__ASYNC_COMPONENTS_STATE}>
+      <BrowserRouter>
+        <App/>
+      </BrowserRouter>
+    </AsyncComponentProvider>
+  </Provider>
 )
 
-render(content, hook)
+asyncBootstrapper(content).then(() => render(content, hook))
