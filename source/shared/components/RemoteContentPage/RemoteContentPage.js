@@ -1,6 +1,7 @@
 import React from 'react'
 import {withJob} from 'react-jobs'
 import axios from 'axios'
+import Helmet from 'react-helmet'
 
 const enhance = withJob({
   work: () => axios.get('http://localhost:4000/api/content')
@@ -17,6 +18,10 @@ const Component = ({
   },
 }) => (
   <main>
+    <Helmet>
+      <title>{title}</title>
+    </Helmet>
+
     <h1>{title}</h1>
 
     <article>

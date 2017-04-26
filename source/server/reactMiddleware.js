@@ -6,6 +6,7 @@ import {JobProvider, createJobContext} from 'react-jobs'
 import asyncBootstrapper from 'react-async-bootstrapper'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
+import Helmet from 'react-helmet'
 
 import createLayout from './createLayout'
 import App from 'shared/components/App'
@@ -31,11 +32,14 @@ export default async ctx => {
   await asyncBootstrapper(jsx)
   const content = renderToString(jsx)
 
+  console.log('reactMiddlware', ctx.request.url, jobContext.getState())
+
   const html = createLayout({
     content,
     asyncState: asyncContext.getState(),
     jobsState: jobContext.getState(),
     reduxState: store.getState(),
+    helmet: Helmet.renderStatic(),
   })
 
   ctx.body = html

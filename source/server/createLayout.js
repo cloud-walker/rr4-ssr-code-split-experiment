@@ -3,11 +3,13 @@ export default ({
   asyncState = {},
   reduxState = {},
   jobsState = {},
+  helmet,
 }) => `
   <!DOCTYPE html>
   <html>
     <head>
       <meta charset="utf-8"/>
+      ${helmet.title.toString()}
       <link rel="shortcut icon" href="http://favicon.placeholder" />
       <script>
         window.__ASYNC_COMPONENTS_STATE = ${JSON.stringify(asyncState)}

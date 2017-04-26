@@ -18,6 +18,8 @@ const enhance = pipe(
 )
 
 const Component = (props) => {
+  console.log('<App />')
+
   return (
     <div>
       <nav>

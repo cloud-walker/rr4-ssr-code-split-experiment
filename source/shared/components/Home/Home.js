@@ -1,7 +1,12 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 const Component = () =>
   <div>
+    <Helmet>
+      <title>Wanderio | Home</title>
+    </Helmet>
+
     <h1>Home</h1>
 
     <article>
