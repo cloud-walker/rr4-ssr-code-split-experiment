@@ -1,6 +1,7 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
+import {Route, Link, withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
+import {pipe} from 'ramda'
 
 import Home from 'shared/components/Home'
 import Foo from 'shared/components/Foo'
@@ -10,7 +11,10 @@ const mapStateToProps = state => ({
   counter: state.counter,
 })
 
-const enhance = connect(mapStateToProps)
+const enhance = pipe(
+  connect(mapStateToProps),
+  withRouter,
+)
 
 const Component = (props) => {
   console.log('rendering App', props)
