@@ -32,7 +32,7 @@ export default async ctx => {
   await asyncBootstrapper(jsx)
   const content = renderToString(jsx)
 
-  console.log('reactMiddlware', ctx.request.url, jobContext.getState())
+  console.log('reactMiddlware', routerContext, ctx.request.url, jobContext.getState())
 
   const html = createLayout({
     content,
@@ -42,5 +42,6 @@ export default async ctx => {
     helmet: Helmet.renderStatic(),
   })
 
+  ctx.status = routerContext.status || 200
   ctx.body = html
 }

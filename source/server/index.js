@@ -13,6 +13,10 @@ app.use(serve(assetsPath))
 app.use(route.get('/api/content', ctx => {
   const title = 'Awesome title'
 
+  if (ctx.request.query.notFound) {
+    ctx.status = 404
+  }
+
   ctx.body = {
     title,
     content: {
